@@ -22,6 +22,10 @@ Designed for diagnosing hardware issues with mice, RF dongles, scroll wheels and
 - Linux Mint / Linux (tested)
 - LCL widgetset
 
+## License
+
+MIT License (see `LICENSE`)
+
 ## Author
 
 Bo Gärdmark (SM6FIE)  
