@@ -29,4 +29,4 @@ Gothenburg, Sweden
 
 ## Screenshot
 
-(Add screenshot here)
+![MouseCatcher screenshot](mousecatcher.png)
