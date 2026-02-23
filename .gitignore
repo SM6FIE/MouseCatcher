@@ -1,0 +1,28 @@
+# Lazarus / FreePascal
+*.o
+*.ppu
+*.compiled
+*.or
+*.rst
+*.dbg
+*.dcu
+*.exe
+*.dll
+*.so
+
+# Lazarus backup/temp
+backup/
+*.bak
+*.~*
+lib/
+
+# Build output
+MouseCatcher
+*.res
+
+# System
+.DS_Store
+Thumbs.db
+
+# Lazarus session files
+*.lps
