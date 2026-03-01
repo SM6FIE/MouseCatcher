@@ -9,12 +9,18 @@
 *.exe
 *.dll
 *.so
-
-# Lazarus backup/temp
+*.a
+# Lazarus backup/temp etc
 backup/
+DevelopmentNotes/
+old/
 *.bak
 *.~*
-lib/
+
+# Lazarus Lib
+lib/*o
+lib/*.ppu
+lib/x86_64-linux
 
 # Build output
 MouseCatcher
@@ -26,3 +32,5 @@ Thumbs.db
 
 # Lazarus session files
 *.lps
+# Linux temp
+*~

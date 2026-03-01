@@ -1,0 +1,262 @@
+object StatsFrm: TStatsFrm
+  Left = 479
+  Height = 605
+  Top = 250
+  Width = 795
+  Caption = 'StatsFrm'
+  ClientHeight = 605
+  ClientWidth = 795
+  LCLVersion = '4.4.0.0'
+  OnClose = FormClose
+  OnCreate = FormCreate
+  object sbStatus: TStatusBar
+    Left = 0
+    Height = 18
+    Top = 587
+    Width = 795
+    Color = clCream
+    Panels = <>
+    ParentColor = False
+  end
+  object PageControl1: TPageControl
+    Left = 0
+    Height = 584
+    Top = 0
+    Width = 792
+    ActivePage = tsHist
+    TabIndex = 1
+    TabOrder = 1
+    OnChange = PageControl1Change
+    object tsDt: TTabSheet
+      Caption = 'Dt'
+      ClientHeight = 554
+      ClientWidth = 782
+      object ChartDt: TChart
+        Left = 0
+        Height = 376
+        Top = 0
+        Width = 776
+        AxisList = <        
+          item
+            Marks.LabelBrush.Style = bsClear
+            Minors = <>
+            Title.LabelFont.Orientation = 900
+            Title.LabelBrush.Style = bsClear
+          end        
+          item
+            Alignment = calBottom
+            Marks.LabelBrush.Style = bsClear
+            Minors = <>
+            Title.LabelBrush.Style = bsClear
+          end>
+        BackColor = clSkyBlue
+        Title.Text.Strings = (
+          'TAChart'
+        )
+        object serDt: TLineSeries
+          LinePen.Color = clRed
+        end
+      end
+      object gbStatValues: TGroupBox
+        Left = 0
+        Height = 81
+        Top = 392
+        Width = 776
+        Caption = 'Statistical Values'
+        ClientHeight = 79
+        ClientWidth = 774
+        TabOrder = 1
+        object ledtSamples: TLabeledEdit
+          Left = 11
+          Height = 28
+          Top = 24
+          Width = 80
+          EditLabel.Height = 16
+          EditLabel.Width = 80
+          EditLabel.Caption = 'Samples #'
+          TabOrder = 0
+          Text = 'ledtSamples'
+        end
+        object ledRate: TLabeledEdit
+          Left = 107
+          Height = 28
+          Top = 24
+          Width = 80
+          EditLabel.Height = 16
+          EditLabel.Width = 80
+          EditLabel.Caption = 'Rate (Hz)'
+          TabOrder = 1
+          Text = 'ledRate'
+        end
+        object ledDtMean: TLabeledEdit
+          Left = 203
+          Height = 28
+          Top = 24
+          Width = 80
+          EditLabel.Height = 16
+          EditLabel.Width = 80
+          EditLabel.Caption = 'dt mean (ms)'
+          TabOrder = 2
+          Text = 'ledDtMean'
+        end
+        object ledMedian: TLabeledEdit
+          Left = 299
+          Height = 28
+          Top = 24
+          Width = 80
+          EditLabel.Height = 16
+          EditLabel.Width = 80
+          EditLabel.Caption = 'Median (ms)'
+          TabOrder = 3
+          Text = 'ledMedian'
+        end
+        object ledP95: TLabeledEdit
+          Left = 395
+          Height = 28
+          Top = 24
+          Width = 80
+          EditLabel.Height = 16
+          EditLabel.Width = 80
+          EditLabel.Caption = 'P95 (ms)'
+          TabOrder = 4
+          Text = 'ledP95'
+        end
+        object ledMax: TLabeledEdit
+          Left = 491
+          Height = 28
+          Top = 24
+          Width = 80
+          EditLabel.Height = 16
+          EditLabel.Width = 80
+          EditLabel.Caption = 'Max (ms)'
+          TabOrder = 5
+          Text = 'ledMax'
+        end
+        object ledDrop25: TLabeledEdit
+          Left = 587
+          Height = 28
+          Top = 24
+          Width = 80
+          EditLabel.Height = 16
+          EditLabel.Width = 80
+          EditLabel.Caption = 'Drop>25ms'
+          TabOrder = 6
+          Text = 'ledDrop25'
+        end
+        object ledDrop50: TLabeledEdit
+          Left = 683
+          Height = 28
+          Top = 24
+          Width = 80
+          EditLabel.Height = 16
+          EditLabel.Width = 80
+          EditLabel.Caption = 'Drop>50ms'
+          TabOrder = 7
+          Text = 'ledDrop50'
+        end
+      end
+      object paButtons: TPanel
+        Left = 656
+        Height = 50
+        Top = 480
+        Width = 122
+        ClientHeight = 50
+        ClientWidth = 122
+        TabOrder = 2
+        object btClose: TButton
+          Left = 24
+          Height = 25
+          Top = 13
+          Width = 75
+          Caption = 'Close'
+          TabOrder = 0
+          OnClick = btCloseClick
+        end
+      end
+    end
+    object tsHist: TTabSheet
+      Caption = 'Histogram'
+      ClientHeight = 554
+      ClientWidth = 782
+      object ChartHist: TChart
+        Left = -5
+        Height = 464
+        Top = 0
+        Width = 797
+        AxisList = <        
+          item
+            Marks.LabelBrush.Style = bsClear
+            Minors = <>
+            Title.LabelFont.Orientation = 900
+            Title.LabelBrush.Style = bsClear
+          end        
+          item
+            Alignment = calBottom
+            Marks.LabelBrush.Style = bsClear
+            Minors = <>
+            Title.LabelBrush.Style = bsClear
+          end>
+        BackColor = 16775903
+        Title.Text.Strings = (
+          'TAChart'
+        )
+        object serHist: TBarSeries
+          BarBrush.Color = clRed
+        end
+      end
+      object Panel1: TPanel
+        Left = 456
+        Height = 74
+        Top = 472
+        Width = 328
+        ClientHeight = 74
+        ClientWidth = 328
+        TabOrder = 1
+        object rgBinSpan: TRadioGroup
+          Left = 8
+          Height = 56
+          Top = 8
+          Width = 209
+          AutoFill = True
+          Caption = 'Bin span ms'
+          ChildSizing.LeftRightSpacing = 6
+          ChildSizing.EnlargeHorizontal = crsHomogenousChildResize
+          ChildSizing.EnlargeVertical = crsHomogenousChildResize
+          ChildSizing.ShrinkHorizontal = crsScaleChilds
+          ChildSizing.ShrinkVertical = crsScaleChilds
+          ChildSizing.Layout = cclLeftToRightThenTopToBottom
+          ChildSizing.ControlsPerLine = 2
+          ClientHeight = 39
+          ClientWidth = 207
+          Color = clMenuBar
+          Columns = 2
+          ItemIndex = 0
+          Items.Strings = (
+            'Fixed, 0-20'
+            'Floating Bin'
+          )
+          ParentBackground = False
+          ParentColor = False
+          TabOrder = 0
+          OnClick = rgBinSpanClick
+        end
+        object btCloseHist: TButton
+          Left = 232
+          Height = 25
+          Top = 29
+          Width = 75
+          Caption = 'Close'
+          Color = clMenuBar
+          TabOrder = 1
+          OnClick = btCloseHistClick
+        end
+      end
+    end
+  end
+  object TmrUpdate: TTimer
+    Interval = 200
+    OnTimer = TmrUpdateTimer
+    Left = 608
+    Top = 48
+  end
+end

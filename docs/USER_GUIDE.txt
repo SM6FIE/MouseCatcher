@@ -1,0 +1,55 @@
+#1:MouseCatcher — User Guide
+
+#3:MouseCatcher is a diagnostic tool that measures mouse behaviour such as:
+
+#7:Cursor movement timing (dt)
+#7:Polling stability
+#7:Button activity including XButton1/XButton2
+#7:Statistical metrics and histogram visualisation
+
+#2:Main Window
+
+#3:The main window shows a movement area where mouse motion is captured.
+#3:LED indicators display button state in real time.
+
+#7:Left / Right / Middle buttons
+#7:Back (XButton1)
+#7:Forward (XButton2)
+
+#4:Tip: Move the cursor continuously to collect better statistics.
+
+#2:Statistics Window
+
+#3:The statistics window presents timing information and plots.
+
+#7:dt chart (sample index vs timing)
+#7:Histogram of timing distribution
+#7:Estimated polling frequency
+
+#4:You can reset counters at any time from the main window.
+
+#2:Histogram Modes
+
+#3:Two bin span modes are available:
+#7:Fixed 0–20 ms range (high resolution)
+#7:Floating span based on current data
+
+#5:rgBinSpan.ItemIndex = 0 -> fixed
+#5:rgBinSpan.ItemIndex = 1 -> floating
+
+#2:Workflow
+#3: 
+#7:Move mouse in the capture area
+#7:Open Statistics
+#7:Observe charts
+#7:Reset and repeat
+
+#6:Note: Very low dt values may be limited by OS scheduling and USB polling.
+
+#2:Developer Notes
+
+#5:DT_RING_MAX defines buffer size
+#5:GetDtSnapshot returns chronological samples
+#5:RefreshNow(True) forces recalculation
+
+#3:For more details see Technical Documentation (PDF).

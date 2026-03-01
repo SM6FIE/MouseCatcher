@@ -8,6 +8,7 @@ object Form1: TForm1
   Caption = 'Mouse Tester (Lazarus/LCL), by SM6FIE'
   ClientHeight = 469
   ClientWidth = 673
+  Menu = MainMenu1
   Position = poScreenCenter
   LCLVersion = '4.4.0.0'
   OnCreate = FormCreate
@@ -143,7 +144,7 @@ object Form1: TForm1
       Caption = 'Capture: No'
     end
     object BtnReset: TButton
-      Left = 518
+      Left = 520
       Height = 28
       Top = 56
       Width = 140
@@ -181,5 +182,37 @@ object Form1: TForm1
     Width = 16
     Brush.Color = clMaroon
     Shape = stCircle
+  end
+  object MainMenu1: TMainMenu
+    Left = 472
+    Top = 81
+    object miFile: TMenuItem
+      Caption = 'File'
+      object miClose: TMenuItem
+        Caption = 'Close'
+        OnClick = miCloseClick
+      end
+    end
+    object miView: TMenuItem
+      Caption = 'View'
+      object miStats: TMenuItem
+        Caption = 'Statistics'
+      end
+      object Separator1: TMenuItem
+        Caption = '-'
+      end
+      object miUserGuide: TMenuItem
+        Caption = 'User Guide'
+        OnClick = miUserGuideClick
+      end
+      object miDevNotes: TMenuItem
+        Caption = 'Tech. Notes (PDF)'
+        OnClick = miDevNotesClick
+      end
+      object miAbout: TMenuItem
+        Caption = 'About'
+        OnClick = miAboutClick
+      end
+    end
   end
 end

@@ -10,8 +10,7 @@ uses
   athreads,
   {$ENDIF}
   Interfaces, // this includes the LCL widgetset
-  Forms, uMouseCatcher
-  { you can add units after this };
+  Forms, runtimetypeinfocontrols, uMouseCatcher, uStats, uInputStats, uAbout, uHelpRender, uUserGuide, uDocOpenLib;
 
 {$R *.res}
 
@@ -23,6 +22,9 @@ begin
   {$POP}
   Application.Initialize;
   Application.CreateForm(TForm1, Form1);
+  Application.CreateForm(TStatsFrm, StatsFrm);
+  Application.CreateForm(TAboutFrm, AboutFrm);
+  Application.CreateForm(TUserGuideFrm, UserGuideFrm);
   Application.Run;
 end.
 

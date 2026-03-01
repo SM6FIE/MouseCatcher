@@ -25,6 +25,30 @@
     </RunParams>
     <RequiredPackages>
       <Item>
+        <PackageName Value="richmemo_design"/>
+      </Item>
+      <Item>
+        <PackageName Value="richmemopackage"/>
+      </Item>
+      <Item>
+        <PackageName Value="RunTimeTypeInfoControls"/>
+      </Item>
+      <Item>
+        <PackageName Value="TurboPowerIPro"/>
+      </Item>
+      <Item>
+        <PackageName Value="FCL"/>
+      </Item>
+      <Item>
+        <PackageName Value="SynEditDsgn"/>
+      </Item>
+      <Item>
+        <PackageName Value="SynEdit"/>
+      </Item>
+      <Item>
+        <PackageName Value="TAChartLazarusPkg"/>
+      </Item>
+      <Item>
         <PackageName Value="LCL"/>
       </Item>
     </RequiredPackages>
@@ -41,6 +65,45 @@
         <ResourceBaseClass Value="Form"/>
         <UnitName Value="uMouseCatcher"/>
       </Unit>
+      <Unit>
+        <Filename Value="ustats.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="StatsFrm"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="uStats"/>
+      </Unit>
+      <Unit>
+        <Filename Value="uinputstats.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="uInputStats"/>
+      </Unit>
+      <Unit>
+        <Filename Value="uabout.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="AboutFrm"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="uAbout"/>
+      </Unit>
+      <Unit>
+        <Filename Value="uhelprender.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="uHelpRender"/>
+      </Unit>
+      <Unit>
+        <Filename Value="uuserguide.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="UserGuideFrm"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="uUserGuide"/>
+      </Unit>
+      <Unit>
+        <Filename Value="lib/udocopenlib.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="uDocOpenLib"/>
+      </Unit>
     </Units>
   </ProjectOptions>
   <CompilerOptions>
@@ -50,6 +113,7 @@
     </Target>
     <SearchPaths>
       <IncludeFiles Value="$(ProjOutDir)"/>
+      <OtherUnitFiles Value="../LazarusLib;lib"/>
       <UnitOutputDirectory Value="lib/$(TargetCPU)-$(TargetOS)"/>
     </SearchPaths>
     <Linking>

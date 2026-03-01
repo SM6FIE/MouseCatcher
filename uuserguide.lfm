@@ -1,0 +1,43 @@
+object UserGuideFrm: TUserGuideFrm
+  Left = 479
+  Height = 831
+  Top = 250
+  Width = 709
+  Caption = 'Mouse Catcher User Guide Notes....'
+  ClientHeight = 831
+  ClientWidth = 709
+  LCLVersion = '4.4.0.0'
+  OnShow = FormShow
+  object rmUserGuide: TRichMemo
+    Left = 2
+    Height = 768
+    Top = 0
+    Width = 702
+    Color = clCream
+    HideSelection = False
+    Lines.Strings = (
+      'rmUserGuide'
+    )
+    ScrollBars = ssAutoVertical
+    TabOrder = 0
+    ZoomFactor = 1
+  end
+  object Panel1: TPanel
+    Left = 598
+    Height = 50
+    Top = 775
+    Width = 106
+    ClientHeight = 50
+    ClientWidth = 106
+    TabOrder = 1
+    object btClose: TButton
+      Left = 16
+      Height = 25
+      Top = 11
+      Width = 75
+      Caption = 'Close'
+      TabOrder = 0
+      OnClick = btCloseClick
+    end
+  end
+end
