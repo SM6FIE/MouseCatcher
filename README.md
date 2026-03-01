@@ -33,4 +33,4 @@ Gothenburg, Sweden
 
 ## Screenshot
 
-![MouseCatcher screenshot](mousecatcher.png)
+[![MouseCatcher screenshot](https://raw.githubusercontent.com/SM6FIE/MouseCatcher/main/Images/Screenshot_main.png)](https://raw.githubusercontent.com/SM6FIE/MouseCatcher/main/Images/Screenshot_main.png)
